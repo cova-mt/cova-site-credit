@@ -398,4 +398,128 @@
       opacity: 1;
       -webkit-transition: .6s 1.2s;
       transition: .6s 1.2s; }
+
+#clsc {
+  width: 200px;
+  margin: auto;
+  display: block;
+  overflow: visible; }
+  #clsc #mask1 .add, #clsc #mask2 .add {
+    -webkit-transition: .3s;
+    transition: .3s;
+    width: 100%;
+    height: 105px;
+    fill: white; }
+  #clsc #mask2 .add {
+    width: 0;
+    -webkit-transition: width 0s .3s, x 0s .3s;
+    transition: width 0s .3s, x 0s .3s; }
+  #clsc .covalent {
+    -webkit-transition: .3s;
+    transition: .3s;
+    opacity: 0; }
+    #clsc .covalent path, #clsc .covalent polygon {
+      fill: #616365; }
+      #clsc .covalent path.green, #clsc .covalent polygon.green {
+        fill: #C1BB00; }
+  #clsc .logic {
+    -webkit-transition: .3s;
+    transition: .3s;
+    opacity: 0; }
+    #clsc .logic path {
+      fill: #616365; }
+  #clsc .created {
+    -webkit-transition: .3s;
+    transition: .3s; }
+    #clsc .created rect, #clsc .created path, #clsc .created circle {
+      fill: #616365; }
+    #clsc .created rect {
+      -webkit-transition: opacity 0s .3s;
+      transition: opacity 0s .3s;
+      -webkit-transform: translateY(-100px);
+              transform: translateY(-100px); }
+    #clsc .created path {
+      -webkit-transition: .1s .1s;
+      transition: .1s .1s;
+      opacity: 1; }
+  #clsc .logo-shapes * {
+    fill: none;
+    stroke: #B8B8B8;
+    stroke-width: 2;
+    opacity: 1;
+    -webkit-transition: 0s;
+    transition: 0s; }
+  #clsc .logo-shapes rect {
+    stroke-dasharray: 237.6, 237.6;
+    stroke-dashoffset: 237.6; }
+  #clsc .logo-shapes circle {
+    stroke-dasharray: 186.6, 186.6;
+    stroke-dashoffset: 186.6; }
+  #clsc .logo {
+    opacity: 0; }
+    #clsc .logo path {
+      fill: #616365; }
+      #clsc .logo path.green {
+        fill: #C1BB00; }
+  #clsc .link {
+    width: 0;
+    height: 0; }
+  #clsc.neutral .created *, #clsc.neutral .covalent *, #clsc.neutral .logic *, #clsc.neutral .logo * {
+    fill: rgba(255, 255, 255, 0.4) !important; }
+  #clsc.neutral .logo-shapes * {
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.4); }
+  #clsc:hover .link, #clsc.open .link {
+    width: 100%;
+    height: 100%;
+    fill: rgba(0, 0, 0, 0);
+    -webkit-transition: 0s .3s;
+    transition: 0s .3s; }
+  #clsc:hover .created, #clsc.open .created {
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px); }
+    #clsc:hover .created rect, #clsc.open .created rect {
+      -webkit-transition: width .6s .3s, x .6s 1s, opacity .3s 1.2s;
+      transition: width .6s .3s, x .6s 1s, opacity .3s 1.2s;
+      width: 2px !important;
+      x: 273px !important;
+      opacity: 0; }
+    #clsc:hover .created path, #clsc.open .created path {
+      -webkit-transition: .1s;
+      transition: .1s;
+      opacity: 0; }
+  #clsc:hover #mask1 .add, #clsc.open #mask1 .add {
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px); }
+  #clsc:hover #mask2 .add, #clsc.open #mask2 .add {
+    -webkit-transition: .6s 1s;
+    transition: .6s 1s;
+    width: 300px; }
+  #clsc:hover .covalent, #clsc.open .covalent {
+    opacity: 1;
+    -webkit-transition: 0;
+    transition: 0; }
+  #clsc:hover .logic, #clsc.open .logic {
+    opacity: 1;
+    -webkit-transition: .6s 1.2s;
+    transition: .6s 1.2s; }
+  #clsc:hover .logo-shapes rect, #clsc:hover .logo-shapes circle, #clsc.open .logo-shapes rect, #clsc.open .logo-shapes circle {
+    stroke-dashoffset: 0;
+    opacity: 0;
+    -webkit-transition: stroke-dashoffset .75s, stroke-width .5s .75s, opacity 1s 1s, -webkit-transform .5s .5s;
+    transition: stroke-dashoffset .75s, stroke-width .5s .75s, opacity 1s 1s, -webkit-transform .5s .5s;
+    transition: stroke-dashoffset .75s, transform .5s .5s, stroke-width .5s .75s, opacity 1s 1s;
+    transition: stroke-dashoffset .75s, transform .5s .5s, stroke-width .5s .75s, opacity 1s 1s, -webkit-transform .5s .5s; }
+  #clsc:hover .logo-shapes circle, #clsc.open .logo-shapes circle {
+    stroke-width: 7.5px; }
+    #clsc:hover .logo-shapes circle:first-of-type, #clsc.open .logo-shapes circle:first-of-type {
+      -webkit-transform: translate(-0.8%, -11.1%) scale(1.07);
+              transform: translate(-0.8%, -11.1%) scale(1.07); }
+    #clsc:hover .logo-shapes circle:last-of-type, #clsc.open .logo-shapes circle:last-of-type {
+      -webkit-transform: translate(-14.2%, 9.7%) scale(1.06);
+              transform: translate(-14.2%, 9.7%) scale(1.06); }
+  #clsc:hover .logo, #clsc.open .logo {
+    opacity: 1;
+    -webkit-transition: opacity .75s 1s;
+    transition: opacity .75s 1s; }
 /*# sourceMappingURL=main.css.map */

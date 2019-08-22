@@ -232,4 +232,125 @@ $newSquareW: 4 * 182.22;
       }
   }
 }
+#site-credit{
+    width: 150px;
+    margin-bottom: 50px;
+    height: auto;
+    // transform: scale(5);
+    margin: auto;
+    position: relative;
+    #bug{
+        width: 50px; height: 50px;
+        position: absolute;
+        top: -36%; right: -17%;
+        overflow: visible;
+        #shapes{
+            rect{
+                stroke: $strokeColor;
+                stroke-width: 2px;
+                opacity: 1;
+                fill: none;
+                stroke-dasharray: $newCircleW, $newCircleW;
+                stroke-dashoffset: $newCircleW;
+                transition: 0s;
+            }
+            circle{
+                stroke: $strokeColor;
+                stroke-width: 2px;
+                opacity: 1;
+                fill: none;
+                stroke-dasharray: $newCircleW, $newCircleW;
+                stroke-dashoffset: $newCircleW;
+                transition: 0s;
+            }
+        }
+        #logo{
+            fill: rgb(103, 103, 103);
+            opacity: 0;
+            transition: opacity .5s;
+        }
+    }
+    #words{
+        max-width: 500px;
+        margin: 0 auto;
+        display: block;
+        #created{
+            path, #screen{
+                fill: #616365;
+            }
+            #screen{
+                transform: translateY(-50px);
+            }
+            transition: .3s;
+        }
+        #mask1,#mask2{
+            .add{
+                transition: .6s;
+                width: 100%;
+                height: 100px;
+                fill: white;
+            }
+        }
+        #mask2{
+            .add{
+                width: 0;
+                // x: 300px;
+            }
+        }
+        #logic{
+            opacity: 0;
+        }
+
+    }
+    &:hover{
+        cursor:pointer;
+        #bug{
+            #shapes{
+                rect, circle{
+                    stroke-dashoffset: 0;
+                    opacity: 0;
+                    transition: stroke-dashoffset 1.5s, transform .75s .25s, stroke-width .5s .5s, opacity 1s .75s;
+                }
+                circle{
+                    stroke-width: 11px;
+                    &:first-of-type{
+                        transform: translate(11.4%, -14%) scale(1.07);
+                    }
+                    &:last-of-type{
+                        transform: translate(-28.3%, 11.8%) scale(1.06);
+                    }
+                }
+            }
+            #logo{
+                opacity: 1;
+                transition: opacity .75s .75s;
+            }
+        }
+        #words{
+            #created{
+                transform: translateY(50px);
+                #screen{
+                    transition: width .6s .3s, x .6s 1s, opacity .3s 1.2s;
+                    width: 2px!important;
+                    x:273px!important;
+                    opacity: 0;
+                }
+                + #mask1 .add{
+                    transform: translateY(-100px);
+                }
+            }
+            #covalent{
+                + #mask2 .add{
+                    // x: 0;
+                    transition: .6s 1s;
+                    width: 300px;
+                }
+            }
+            #logic{
+                opacity: 1;
+                transition: .6s 1.2s;
+            }
+        }
+    }
+}
 @import 'site-credit';
